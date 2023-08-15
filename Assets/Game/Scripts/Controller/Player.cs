@@ -31,11 +31,12 @@ namespace Game.Controller
             float vertical = Input.GetAxis("Vertical");
             Vector3 direction=new Vector3(-vertical, 0, horizontal);
             direction.Normalize();
-            if(direction != Vector3.zero)
+            if(direction != Vector3.zero && MousePosition() != Vector3.zero)
             {
                 GetComponent<Mover>().RotateSelf(direction, rotSpeed);
             }
-            GetComponent<Mover>().Move(rb, moveSpeed*direction.magnitude);
+            GetComponent<Mover>().RotateToward(MousePosition(), rotSpeed);
+            GetComponent<Mover>().Move(moveSpeed, direction);
         }
         private Vector3 MousePosition()
         {
@@ -43,7 +44,7 @@ namespace Game.Controller
             Vector3 worldPos;
             Ray ray = Camera.main.ScreenPointToRay(mousePos);
             RaycastHit hitInfo;
-            if(Physics.Raycast(ray,out hitInfo, 1000))
+            if(Physics.Raycast(ray,out hitInfo, 1000,LayerMask.GetMask("Enemy")))
             {
                 worldPos = hitInfo.point;
                 return new Vector3(worldPos.x,transform.position.y,worldPos.z);

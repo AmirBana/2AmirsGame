@@ -97,8 +97,10 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: c7223f9553579f54ca6bcff78776b361,
+    type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 78e7a15c8be7ae0478f18b6eeb68dec6,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -834,6 +836,27 @@ CapsuleCollider:
   m_Height: 1.5227026
   m_Direction: 1
   m_Center: {x: 0.016662896, y: -0.20636433, z: 0}
+--- !u!95 &1133071018
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133071001}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 0308cf4e83cf517488b60af58b290fe0, type: 3}
+  m_Controller: {fileID: 9100000, guid: 2be64f57d7d213648aa9b2e5e8e0a39b, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1484386558
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,6 +1421,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 120667517627778854, guid: ebe06c5d6c9e7ab4b94f2baeee4bba80,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2771363466253542001, guid: ebe06c5d6c9e7ab4b94f2baeee4bba80,
         type: 3}
       propertyPath: m_Radius
@@ -1463,6 +1491,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 7733356693884362917, guid: ebe06c5d6c9e7ab4b94f2baeee4bba80,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1471,6 +1504,10 @@ PrefabInstance:
         type: 3}
       insertIndex: 1
       addedObject: {fileID: 1133071013}
+    - targetCorrespondingSourceObject: {fileID: 4124116139766837163, guid: ebe06c5d6c9e7ab4b94f2baeee4bba80,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1133071018}
   m_SourcePrefab: {fileID: 100100000, guid: ebe06c5d6c9e7ab4b94f2baeee4bba80, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
