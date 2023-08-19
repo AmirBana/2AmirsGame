@@ -12,11 +12,12 @@ namespace Game.Movement
         }
         public void Move(float speed,Vector3 dir)
         {
-            if(dir != Vector3.zero)
+            if (dir != Vector3.zero)
             {
                 Quaternion toRotation = Quaternion.LookRotation(dir, Vector3.up);
                 Quaternion diff = toRotation * Quaternion.Inverse(transform.rotation);
                 Vector3 moveDir = CalculateMoveDir(diff.eulerAngles);
+                print(moveDir);
                 anim.SetFloat("VelocityY", moveDir.z * speed);
                 anim.SetFloat("VelocityX", moveDir.x * speed);
             }
@@ -57,7 +58,8 @@ namespace Game.Movement
                 z = 360 - diff.y;
                 x = diff.y - 270;
             }
-            return new Vector3(x, 0, z).normalized;
+            Vector3 moveRot = new Vector3(x, 0, z).normalized;
+            return moveRot;
         }
 
         public void RotateSelf(Vector3 direction,float rotSpeed)

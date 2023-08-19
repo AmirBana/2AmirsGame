@@ -9,9 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3838044416664451711}
+  - component: {fileID: 7627887575410120756}
   - component: {fileID: 495925805467215046}
   - component: {fileID: 120667517627778854}
   - component: {fileID: 4991942802018048381}
+  - component: {fileID: 628820626060773450}
   m_Layer: 3
   m_Name: player
   m_TagString: Player
@@ -35,6 +37,29 @@ Transform:
   - {fileID: 7843264551702782878}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &7627887575410120756
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4124116139766837163}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.40171373
+  m_Height: 1.5227026
+  m_Direction: 1
+  m_Center: {x: 0.016662896, y: -0.20636433, z: 0}
 --- !u!54 &495925805467215046
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -58,9 +83,9 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &120667517627778854
 MonoBehaviour:
@@ -75,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotSpeed: 1000
-  moveSpeed: 100
+  moveSpeed: 5
 --- !u!114 &4991942802018048381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,6 +113,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc08e10ec0fe1594d948e540436aa3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &628820626060773450
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4124116139766837163}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 0308cf4e83cf517488b60af58b290fe0, type: 3}
+  m_Controller: {fileID: 9100000, guid: 2be64f57d7d213648aa9b2e5e8e0a39b, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &8501979418630948708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -151,7 +197,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2211126460430936001, guid: 257c304c754d3b247a51ef5bea7a90d0, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
